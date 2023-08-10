@@ -3,9 +3,10 @@
 /**
 * main - Entry point
 *
-* Description: A C program that prints with the printf function.
+* Description: A C program that prints a messae using
+* printf()
 *
-* Return : Always 0 (success)
+* Return: Always 0 (success).
 */
 
 
