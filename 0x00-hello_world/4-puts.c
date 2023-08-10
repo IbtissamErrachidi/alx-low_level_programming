@@ -1,5 +1,22 @@
 #include <stdio.h>
-int main(void){
+
+gcc -E $CFILE > c
+
+/**
+* main - Entry point
+*
+* Description: A C program that will print the message
+* "Programming is like building a multilingual puzzle" using the puts function.
+*
+* Return: Always 0 (success)
+*/
+
+int main(void)
+{
     puts("\"Programming is like building a multilingual puzzle");
-  return (0);
+    return (0);
 }
+
+
+
+
