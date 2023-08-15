@@ -1,16 +1,26 @@
 #include "main.h"
 
 /**
- * _isalpha - checks if a character is alphabetic
- * @c: The character to check
+ * print_sign - prints the sign of a number
+ * @n: The number to check
  *
- * Return: 1 if c is a letter, 0 otherwise
+ * Return: 1 if +, 0 if n is zero, -1 if -
  */
-int _isalpha(int c)
+int print_sign(int n)
 {
-	if (c >= 97 && c <= 122)
+	if (n > 0)
+	{
+		_putchar('+');
 		return (1);
-	if (c >= 65 && c <= 90)
-		return (1);
-	return (0);
+	}
+	else if (n == 0)
+	{
+		_putchar('0');
+		return (0);
+	}
+	else
+	{
+		_putchar('-');
+		return (-1);
+	}
 }
