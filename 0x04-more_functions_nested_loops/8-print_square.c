@@ -1,4 +1,4 @@
-#include "main"
+#include "main.h"
 
 /**
  * print_square - print a square using the character #
@@ -10,19 +10,11 @@
 
 void print_square(int size)
 {
-	if (size <= 0)
+	int i, j;
+	for (i = 1; i <= size; i++)
 	{
+		for (j = 1; j <= size; j++)
+			_putchar('#');
 		_putchar('\n');
-	}
-	else
-	{
-		for (int i = 0; i < size; i++)
-		{
-			for (int j = 0; j < size; j++)
-			{
-				_putchar('#');
-			}
-			_putchar('\n');
-		}
 	}
 }
