@@ -11,6 +11,8 @@
 void rev_string(char *s)
 {
 	int length = 0;
+	int start = 0;
+	int end;
 
 	/* Calculate the length of the string */
 	while (s[length] != '\0')
@@ -18,8 +20,7 @@ void rev_string(char *s)
 		length++;
 	}
 
-	int start = 0;
-	int end = length - 1;
+	end = length - 1;
 
 	/* Reverse the string using a two-pointer approach */
 	while (start < end)
