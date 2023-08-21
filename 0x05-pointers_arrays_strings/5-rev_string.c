@@ -26,6 +26,7 @@ void rev_string(char *s)
 	{
 		/* Swap characters at the start and end positions */
 		char temp = s[start];
+
 		s[start] = s[end];
 		s[end] = temp;
 
