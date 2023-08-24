@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
@@ -13,6 +12,7 @@ char *rot13(char *str)
 
 	char rot13[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char ROT13[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+	char *prt = str;
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
@@ -24,6 +24,7 @@ char *rot13(char *str)
 				break;
 			}
 		}
+		str++;
 	}
-	return (str);
+	return (prt);
 }
