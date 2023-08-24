@@ -14,7 +14,7 @@ char *rot13(char *str)
 	char ROT13[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 	char *prt = str;
 
-	for (i = 0; str[i] != '\0'; i++)
+	while (*str)
 	{
 		for (i = 0; i <= 52; i++)
 		{
