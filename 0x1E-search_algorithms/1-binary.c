@@ -10,33 +10,28 @@
   * Return: The first index where value is located, otherwise return -1.
   *
   */
+
 int binary_search(int *array, size_t size, int value)
 {
-	size_t first_index = 0;
-	size_t last_index = size - 1;
-	size_t mid_index;
+	size_t i, left, right;
 
 	if (array == NULL)
 		return (-1);
 
-	while (first_index <= last_index)
+	for (left = 0, right = size - 1; right >= left;)
 	{
 		printf("Searching in array: ");
-		for (size_t i = first_index; i <= last_index; i++)
-		{
-			printf("%d", array[i]);
-			if (i != last_index)
-				printf(", ");
-		}
-		printf("\n");
-		mid_index = first_index + (last_index - first_index) / 2;
+		for (i = left; i < right; i++)
+			printf("%d, ", array[i]);
+		printf("%d\n", array[i]);
 
-		if (value == array[mid_index])
-			return (mid_index);
-		else if (value > array[mid_index])
-			first_index = mid_index + 1;
+		i = left + (right - left) / 2;
+		if (array[i] == value)
+			return (i);
+		if (array[i] > value)
+			right = i - 1;
 		else
-			last_index = mid_index - 1;
+			left = i + 1;
 	}
 
 	return (-1);
